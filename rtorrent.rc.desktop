@@ -1,0 +1,50 @@
+# .rtorrent.rc
+# http://libtorrent.rakshasa.no/browser/trunk/rtorrent/doc/rtorrent.rc?rev=957
+# for the rest of the file...
+
+#settings of torrents will be saved in this directory
+session = /home/matt/.config/rtorrent
+
+# save status to session file on torrent completion
+session_on_completion = yes
+
+# default directory
+directory = ~/.torrents/tmp/
+
+# default upload speed
+upload_rate = 30
+
+# default download speed
+download_rate = 40
+
+# if rtorrent should use UDP
+use_udp_trackers = no
+
+# stop uploading when ratio = 1.5 and file size greate than 100MB
+#schedule = ratio,60,60,stop_on_ratio=200,200M,500
+
+# stops downloading when there is less than 20MB of diskspace
+schedule = low_diskspace,5,60,close_low_diskspace=20M
+
+ip = 127.0.0.1
+
+#dht = auto
+#dht_port = 6881
+
+
+# Move completed torrents to different directory depending on watch directory
+# Each watch directory adds torrents with the final destination stored
+# in the "custom1" string of the download. You can check this string with
+# ctrl-X then "print=$d.get_custom1=" in the client.
+
+schedule = watch_directory_1,10,10,"load_start=~/.torrents/music/*,d.set_custom1=~/loads/music/"
+schedule = watch_directory_2,10,10,"load_start=~/.torrents/videos/*,d.set_custom1=~/loads/videos/"
+schedule = watch_directory_3,10,10,"load_start=~/.torrents/other/*,d.set_custom1=~/loads/other/"
+
+# On completion, move the torrent to the directory from custom1.
+on_finished = move_complete,"execute=mv,-u,$d.get_base_path=,$d.get_custom1= ;d.set_directory=$d.get_custom1="
+
+
+# scheduling download rate, Unlimited at night, slower during day
+schedule = throttle_1,01:00:00,24:00:00,download_rate=0
+schedule = throttle_2,06:00:00,24:00:00,download_rate=25

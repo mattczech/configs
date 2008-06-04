@@ -1,0 +1,19 @@
+# don't display the startup message
+startup_message off
+
+autodetach on # Autodetach session on hangup rather than terminating
+
+# Status bar
+#caption always "%m/%d/%y %0c%{=b kg}  %l  %{=r gk}%-w%{=b wb}%50>%n%f* %t%{-}%+Lw%<%{- Wk}"
+hardstatus alwayslastline "%{=}%{kG} Screen(s): %{w}%w %=%{kG}%C%A  %D, %M/%d/%Y"
+
+# Change the default scrollback value
+defscrollback 1000		# default: 100
+
+# Setup default windows
+screen -t sh 0
+screen -t im 1 finch
+screen -t irc 2
+screen -t torrents 3
+
+bindkey -d -k kb stuff "\010"
