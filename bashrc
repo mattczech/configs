@@ -53,5 +53,6 @@ complete -cf sudo
 export PATH
 export PS1
 export OOO_FORCE_DESKTOP=gnome
+export EDITOR='vim'
 
 export SVN_EDITOR='vim'
