@@ -1,0 +1,32 @@
+URxvt*font:             xft:terminus:pixelsize=12
+URxvt*scrollBar:        false
+URxvt*underlineColor:   #99CCFF
+URxvt.borderLess:       true
+
+*color0:                #333333
+*color1:                #D53737
+*color2:                #75BD00
+*color3:                #F1BB32
+*color4:                #99CCFF
+*color5:                #A368CD
+*color6:                #99CCFF
+*color7:                #E0E0E0
+*color8:                #C3C3C3
+*color9:                #FF6060
+*color10:               #75BD00
+*color11:               #FFB044
+*color12:               #99CCFF
+*color13:               #887680
+*color14:               #9CC1C2
+*color15:               #FFFFFF
+
+
+*background:            #333333
+*foreground:            #FFFFFF
+
+Xft.dpi:                96
+Xft.autohinting:        1
+Xft.hintstyle:          hintfull
+Xft.antialias:          1
+Xft.rgba:               rgb
+
