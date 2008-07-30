@@ -19,6 +19,11 @@ alias dus='du -sh'
 alias df='df -h'
 alias ncmpc='ncmpc -c'
 
+# Computer Specific Settings
+if [ `hostname` == "nitti" ]; then
+	PATH=~/packages/bin:$PATH
+fi
+
 # Prompt
 #PS1='[\u@\h \W]\$ '
 PS1="\[\033[01;32m\]\u@\h\[\033[01;34m\] \W \$ \[\033[00m\]"
