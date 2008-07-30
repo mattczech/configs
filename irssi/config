@@ -317,4 +317,4 @@ windows = {
   };
 };
 mainwindows = { 1 = { first_line = "1"; lines = "21"; }; };
-hilights = ( { text = "cmpr365"; nick = "yes"; word = "yes"; } );
+hilights = ( );
