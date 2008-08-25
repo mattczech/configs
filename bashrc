@@ -22,6 +22,11 @@ alias ncmpc='ncmpc -c'
 # Computer Specific Settings
 if [ `hostname` == "nitti" ]; then
 	PATH=~/packages/bin:$PATH
+elif [ `hostname` == "tux" ]; then
+  # ssh stuff
+  # start keychain and point it to the private keys
+  /usr/bin/keychain ~/.ssh/id_rsa
+  [[ -f $HOME/.keychain/$HOSTNAME-sh ]] && source $HOME/.keychain/$HOSTNAME-sh
 fi
 
 # Prompt
@@ -54,11 +59,6 @@ extract () {
 
 # Enable bash completion when using sudo
 complete -cf sudo
-
-# ssh stuff
-# start keychain and point it to the private keys
-/usr/bin/keychain ~/.ssh/id_rsa
-[[ -f $HOME/.keychain/$HOSTNAME-sh ]] && source $HOME/.keychain/$HOSTNAME-sh
 
 export PATH
 export PS1
