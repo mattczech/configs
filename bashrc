@@ -55,6 +55,11 @@ extract () {
 # Enable bash completion when using sudo
 complete -cf sudo
 
+# ssh stuff
+# start keychain and point it to the private keys
+/usr/bin/keychain ~/.ssh/id_rsa
+[[ -f $HOME/.keychain/$HOSTNAME-sh ]] && source $HOME/.keychain/$HOSTNAME-sh
+
 export PATH
 export PS1
 export OOO_FORCE_DESKTOP=gnome
