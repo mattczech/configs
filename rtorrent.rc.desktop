@@ -40,6 +40,7 @@ ip = 127.0.0.1
 schedule = watch_directory_1,10,10,"load_start=~/.torrents/music/*,d.set_custom1=~/loads/music/"
 schedule = watch_directory_2,10,10,"load_start=~/.torrents/videos/*,d.set_custom1=~/loads/videos/"
 schedule = watch_directory_3,10,10,"load_start=~/.torrents/other/*,d.set_custom1=~/loads/other/"
+schedule = watch_directory_3,10,10,"load_start=~/.torrents/tv/*,d.set_custom1=~/loads/tv/"
 
 # On completion, move the torrent to the directory from custom1.
 on_finished = move_complete,"execute=mv,-u,$d.get_base_path=,$d.get_custom1= ;d.set_directory=$d.get_custom1="
