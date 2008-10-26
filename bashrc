@@ -33,6 +33,10 @@ fi
 #PS1='[\u@\h \W]\$ '
 PS1="\[\033[01;32m\]\u@\h\[\033[01;34m\] \W \$ \[\033[00m\]"
 
+if [ -f /etc/bash_completion ]; then
+  . /etc/bash_completion
+fi
+
 # Path
 PATH=$PATH:/usr/local/bin:/opt/openoffice/program:.
 
