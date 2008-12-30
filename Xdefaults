@@ -1,7 +1,7 @@
 URxvt*font:             xft:terminus:pixelsize=12
 URxvt*scrollBar:        false
 URxvt*underlineColor:   #99CCFF
-URxvt.borderLess:       true
+#URxvt.borderLess:       true
 
 *color0:                #333333
 *color1:                #D53737
