@@ -18,6 +18,9 @@ alias dum='du --max-depth=1 -h'
 alias dus='du -sh'
 alias df='df -h'
 alias ncmpc='ncmpc -c'
+alias gs='git status'
+alias gc='git commit'
+alias gd='git diff'
 
 # Computer Specific Settings
 if [ `hostname` == "nitti" ]; then
@@ -38,7 +41,7 @@ if [ -f /etc/bash_completion ]; then
 fi
 
 # Path
-PATH=$PATH:/usr/local/bin:/opt/openoffice/program:.
+PATH=$PATH:/usr/local/bin:/opt/openoffice/program:~/bin:.
 
 #Functions
 extract () {
