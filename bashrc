@@ -30,6 +30,10 @@ elif [ `hostname` == "tux" ]; then
   # start keychain and point it to the private keys
   /usr/bin/keychain ~/.ssh/id_rsa
   [[ -f $HOME/.keychain/$HOSTNAME-sh ]] && source $HOME/.keychain/$HOSTNAME-sh
+elif [ `hostname` == "mattc" ]; then
+  # Use XES site wide settings
+  . /opt/etc/profile
+  umask 022
 fi
 
 # Prompt
